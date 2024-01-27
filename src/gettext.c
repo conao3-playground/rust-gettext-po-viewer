@@ -61,3 +61,23 @@ po_file_t c_po_file_read(char* filename) {
     po_file_t po = po_file_read(filename, &handler);
     return po;
 }
+
+po_message_iterator_t c_po_message_iterator(po_file_t po) {
+    po_message_iterator_t it = po_message_iterator(po, NULL);
+    return it;
+}
+
+po_message_t c_po_next_message(po_message_iterator_t it) {
+    po_message_t msg = po_next_message(it);
+    return msg;
+}
+
+const char* c_po_message_msgid(po_message_t msg) {
+    const char* msgid = po_message_msgid(msg);
+    return msgid;
+}
+
+const char* c_po_message_msgstr(po_message_t msg) {
+    const char* msgstr = po_message_msgstr(msg);
+    return msgstr;
+}
