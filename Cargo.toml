@@ -1,0 +1,11 @@
+[package]
+name = "gettext-po-viewer"
+version = "0.1.0"
+edition = "2021"
+build = "build.rs"
+
+[dependencies]
+libc = "0.2.152"
+
+[build-dependencies]
+cc = "1.0.83"
